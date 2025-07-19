@@ -1,23 +1,118 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css" >
-    </head>
-    <body>
-        <h1>Home Page</h1>
-        <h2>This is a heading</h2>
-        <h3>This is a heading</h3>
-        <h4>This is a heading</h4>
-        <h5>This is a heading</h5>
-        <h1>This is a heading</h1> 
-        <p>Hello everyone</p>
-        <p>This is fun</p>
-        <img src="images/Titi 101 (1).jpg" height="150"/>
-        <img src="images/Titi 1020.jpg" height="150"/>
-        <img src="images/Titi 103.jpg" height="150"/>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titi ESL Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/" alt="Titi Learning ESL Hub"></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">☰</div>
+        </nav>
+    </header>
 
-        <a href="http://www.google.com">Click here to go to Google</a>
-        <a href="http://TitiKid.com/"> here to go to TitiKid</a>
-        <a href="about.html">Click here to go to About us</a>
-    </body>
+    <section id="home" class="hero">
+        <h1>Learn English with Confidence</h1>
+        <p>Join our ESL courses to improve your speaking, writing, and comprehension skills.</p>
+        <a href="#courses" class="btn">Explore Courses</a>
+    </section>
+
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="course-grid">
+            <div class="course-card">
+                <h3>Beginner English</h3>
+                <p>Master basic vocabulary and grammar for everyday communication.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h3>Intermediate English</h3>
+                <p>Enhance your fluency with advanced conversational skills.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="course-card">
+                <h3>Business English</h3>
+                <p>Develop professional language skills for the workplace.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial active">
+                <p>"ESL Hub transformed my confidence in speaking English!"</p>
+                <h4>- Maria, Spain</h4>
+            </div>
+            <div class="testimonial">
+                <p>"The courses are engaging and easy to follow."</p>
+                <h4>- Ahmed, Egypt</h4>
+            </div>
+            <div class="testimonial">
+                <p>"I landed my dream job thanks to the Business English course."</p>
+                <h4>- Li, China</h4>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <img src="images/" alt="Profile Picture" width="300" height="300">
+            <input type="text" name="name" placeholder="Nigel Tambula" required>
+            <input type="email" name="email" placeholder="kudzanaitambs92@gmail.com" required>
+            <input type="text" name="cell number" placeholder="+27 67 010 7066" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Titi Learning ESL Hub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js">
+        // JavaScript code for interactivity
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Testimonial slider functionality
+        let currentSlide = 0;
+        const testimonials = document.querySelectorAll('.testimonial');
+
+        function showSlide(index) {
+            testimonials.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % testimonials.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + testimonials.length) % testimonials.length;
+            showSlide(currentSlide);
+        }
+    </script>
+</body>
 </html>

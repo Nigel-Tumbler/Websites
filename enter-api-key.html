@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>API Key</title>
+</head>
+<body>
+  <div>Please enter a valid API key</div>
+
+  <form id="apiKeyForm">
+    <input type="email" id="apiKey" name="apiKey" placeholder="Enter API Key" required />
+    <button type="submit" id="submitApiKey">Submit</button>
+  </form>
+
+  <script>
+    const rootPath = "https://mysite.itvarsity.org/api/ContactBook/";
+
+    document.getElementById("apiKeyForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const apiKey = document.getElementById("apiKey").value.trim();
+
+      fetch(rootPath + "controller/api-key/?apiKey=" + encodeURIComponent(apiKey))
+        .then(response => response.text())
+        .then(data => {
+          if (data === "1") {
+            localStorage.setItem("apiKey", apiKey);
+            window.open("index.html", "_self");
+          } else {
+            alert("Invalid API key entered: " + data);
+          }
+        })
+        .catch(error => {
+          alert("Error verifying API key: " + error);
+        });
+    });
+  </script>
+</body>
+</html>
