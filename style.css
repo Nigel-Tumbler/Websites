@@ -1,202 +1,143 @@
-body{
-      padding    : 0;
-      margin     : 0;
-      font-family: Helvetica;
-    }
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    /*============ HEADER ============*/
-    #header{
-       position: fixed;
-       top     : 0;
-       left    : 0;
-       z-index : 500;
-       width   :100%;
-       height  :80px;
-       background-image : url(Images/wood-bg);
-       background-repeat: repeat-x;
-    }
+body {
+  background: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
 
-    #header img{
-       display: block;
-       margin : auto;
-       height : 70%;
-       padding-top: 15px;
-    }
-    
-    /*============ TOP-TABS ============*/
+/* Header */
+header {
+  background: #003366;
+  padding: 20px 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    #tabs-top{
-        position: fixed;
-        top     : 80px;
-        left    : 0;
-        z-index : 500;
-        width   : 100%;
-        height  : 40px;
-        background-color: darkgreen;
-     }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
-        #tabs-top a{
-        float   : left;
-        display : block;
-        width   : 33%;
-        height  :35px;
-        font-weight : 700;
-        color       : white;
-        text-align  : center;
-        text-decoration : none;
-        padding-top     : 12px;  
-     }
-        
-     /*============ MAIN HOME ============*/
+.logo img {
+  height: 50px;
+}
 
-     #main-home{
-         margin-top: 120px;
-     }
+.logo h1 {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
 
-     /*============ BOTTOM TABS ============*/
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-     #tabs-bottom{
-       position : fixed;
-       bottom   : 0;
-       left     : 0;
-       z-index  : 500;
-       width    : 100%;
-       height   : 40px;
-       background-color: forestgreen;
-     }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-     #tabs-bottom a{
-       float : left;
-       display : block;
-       width : 50%;
-       height : 35px;
-       font-weight : 700;
-       color       : white;
-       text-align  : center;
-       text-decoration : none;
-       padding-top     : none;
-     }
+nav a:hover {
+  text-decoration: underline;
+}
 
-     /*============ MAIN ==============*/
+/* Hero section */
+.hero {
+  padding: 100px 20px;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1565514082350-80a1b9c0f3ad') center/cover no-repeat;
+  color: white;
+}
 
-     #main{
-        margin-top: 119px;
-        background: url('images/map-blur.png');
-        background-repeat: repeat-y;
-        }
+/* Sections */
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-     #content{
-        padding-top: 1px;
-        padding-bottom: 50px;
-        }
+h2 {
+  margin-bottom: 20px;
+  color: #003366;
+}
 
-    /*============ INFO BOX============*/
+/* Services grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
 
-      #info-box{
-        text-decoration : none;
-        background      : rgba(255 ,225, 55, .8);
-        width           : 90%;
-        height          : 90px;
-        display         : block;
-        margin          : auto;
-        margin-top      : 12px;
-        padding         : 1px;
-        }
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-      #info-box img{
-        height : 70px;
-        margin : 10px;
-        float  : left;
-        }
+/* Footer */
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
 
-      #info-box h3{
-        padding : 0;
-        margin-bottom :0;
-        width : 90%;
-        color : #572800;
-        }
+/* Form */
+form input, form textarea, form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
 
-      #info-box p{
-         margin  : 0;
-         padding : 0;
-         width   : 90%;
-         color   : 131313;
-        }
+form button {
+  background: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
-      #info-box img.right{
-         float      : right;
-         margin-top : 25px;
-         height :    40px;
-        }
+form button:hover {
+  background: #002244;
+}
 
-   /*============ INFO BOX FULL============*/
+/* Responsive */
+h2 {
+  text-align: center;
+}
 
-      #info-box-full{
-         background-color: rgba(255 ,225, 55, .8);
-         width: 90%;
-         display: block;
-         margin: auto;
-         margin-top: 12px;
-         padding: 10px;
-      }
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
 
-      #info-box-full img{
-         width: 100%;
-      }
+.whatsapp-float img {
+  width: 35px;
+  margin-top: 12px;
+}
 
-      #info-box-full{
-         text-align: center;
-      }
-
-    /*============ WEATHER============*/
-
-    img.info-box-weather-icon{
-        height: 30px;
-        width: 30px !important;
-        margin: 10px;
-        float: left;
-    }
-
-    h1.info-box-weather-icon{
-        font-size: 65px;
-        font-weight: 200;
-        padding: 0;
-        margin: 0;
-    }
-
-    table{
-        width: 100;
-    }
-
-    td{
-        border-top: 1px solid #131313;
-    }
-
-    /*============ FORM============*/
-
-    input{
-        width: 100%;
-        min-height: 25px;
-        margin: 12px 0;
-        border: 1px solid #929292;
-    }
-
-    textarea{
-        width: 100%;
-        height: 65px;
-        margin: 12px 0;
-        border: 1px;
-    }
-
-    .button{
-        display: block;
-        width: 100%;
-        background-color: forestgreen;
-        text-decoration: none;
-        text-align: center;
-        color: white;
-        font-size: 16px;
-        font-weight: 600;
-        margin: 12px 0;
-        padding: 8px 0;
-    }

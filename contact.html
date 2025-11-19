@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hedmenn Strauss Pty Ltd | Home</title>
+  <title>Hedmenn | Contact</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <img src="images/logo.png" alt="">
-    <h1>Hedmenn Strauss Pty Ltd</h1>
-  </div>
+  <h1>Hedmenn Strauss Pty Ltd</h1>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -22,28 +20,34 @@
   </nav>
 </header>
 
-<div class="hero">
-  <h2>Striving to thrive</h2>
-  <p>Secure your future with our comprehensive financial services</p>
-</div>
+<section>
+  <h2>Contact Us</h2>
+  <h2>Tel: +27 (0) 87 147 1971</h2>
+  <h2>Email Us at:contact@hedmenns.com</h2>
+  <h2>Web: www.hedmenns.com</h2>
+  <form onsubmit="return validateForm()">
+    <label>Name*</label><br>
+    <input type="text" id="name"><br><br>
 
-               <section>
-                      <h2> Welcome to Headmenn Strauss (Pty) Ltd </h2>
-  <p>
-    Headmenn Strauss (Pty) Ltd was established in 2006, with a vision to be a financial services provider for sustainable energy solutions.
-  </p>
-  <p></p>
-            </section>
+    <label>Email*</label><br>
+    <input type="email" id="email"><br><br>
+
+    <label>Message</label><br>
+    <textarea id="message" rows="6"></textarea><br><br>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
 <footer>
   <p>An authorised financial services provider (FSP 50921) and registered credit provider (NCRP15082) Headmenn Strauss Proprietary Limited, Company Registration:2006/030737/07.</p>
   <a href="https://wa.me/+27660688673" class="whatsapp-float" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
 </a>
- </a>
-
 </footer>
+
 </body>
 </html>
+
 
 
